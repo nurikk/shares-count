@@ -7,9 +7,9 @@ window.VK.Share =
       window["#{cb_prefix}_#{index}"](shares_count)
 vk =
   url: (url) ->
-    "https://vk.com/share.php?act=count&url=#{encodeURIComponent url}&index=#{current_cb_index}"
+    current_cb_index++
+    ["https://vk.com/share.php?act=count&url=#{encodeURIComponent url}&index=#{current_cb_index}", "#{cb_prefix}_#{current_cb_index}"]
   extract: (data) ->
     data
-  cb_name: ->
-    name = "#{cb_prefix}_#{current_cb_index++}"
-    name
+
+module.exports = vk
