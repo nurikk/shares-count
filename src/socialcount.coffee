@@ -1,7 +1,6 @@
 jsonp = require('./jsonp')
 providers = {
-  facebook: require('./providers/facebook')
-  twitter: require('./providers/twitter')
+  facebook: require('./providers/facebook')  
   vk: require('./providers/vk')
   ok: require('./providers/ok')
 }
